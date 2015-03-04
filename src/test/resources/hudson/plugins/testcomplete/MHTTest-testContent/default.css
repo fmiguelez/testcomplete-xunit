@@ -1,0 +1,211 @@
+@media all {
+
+html
+	{
+	height: 99%;
+	margin: 0;
+	padding: 0;
+	}
+
+body
+	{
+	height: 100%;
+	background-color: White;
+	margin: 5;
+	padding: 0;
+	overflow: hidden;
+	}
+	
+body, table, td, div, p, pre, a, select 
+	{
+	font-family: Arial, Tahoma;
+	font-size: 8pt; 
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	}
+
+table.monofont td
+	{
+	font-family: 'Courier New', Courier, monospace;
+	}
+
+select
+	{
+	margin: 0px;
+	}
+
+.singleFrame 
+	{ 
+	border-style: solid; 
+	border-width: 1px; 
+	border-color: #999999; 
+	background-color: White;
+	}    
+
+.cellCaption 
+	{ 
+	text-indent: 8;	
+	height: 19;	
+	background-color: #CCCCCC; 
+	color: #444444; 
+	padding-top: 2;	
+	cursor: default;
+	}
+
+.tableHeaderCell
+	{
+	height: 19;	
+	background-color: #CCCCCC;
+	color: #444444; 
+	padding-top: 2;	
+	cursor: pointer;
+	border-style: solid; 
+	border-width: 1px; 
+	border-color: #999999; 
+	}
+	
+.tableBody
+	{
+	/* background-color: #EEEEEE; */
+	border-style: solid; 
+	border-width: 1px; 
+	border-color: #999999; 
+	padding: 2;
+	overflow: auto;
+	}
+	
+.cellValue
+	{
+	padding-left: 7;
+	padding-right: 7;
+	height: 19;	
+	vertical-align: center;
+	text-align: left;
+	white-space: nowrap;
+	}
+	 
+
+.detailsBody
+	{
+	background-color: #EEEEEE;
+	}
+
+.linkCell
+	{
+	cursor: pointer;
+	text-decoration: underline;
+	padding-top: 2;
+	height: 19;	
+	}
+
+.treeNodeCaption
+	{
+	text-transform: capitalize;
+	border-width: 1;
+	border-color: white;
+	border-style: solid;
+	padding: 1 5 1 2;
+	cursor: pointer;
+	}
+	
+.treeNode
+	{
+	margin: 0;
+	cursor: pointer;
+	width: 100%;
+	}
+
+.selectedRow
+	{
+	background-color: #EEEEEE;
+	}
+
+
+.btn_disabled
+	{
+	color: #999999;
+	cursor: default;
+	background-color: white;
+	}
+
+.btn_hovered
+	{
+	color: #000000;
+	cursor: pointer;
+	background-color: #C0D0F0;
+	}
+
+.btn_enabled
+	{
+	color: #000000;
+	cursor: pointer;
+	background-color: white;
+	}
+
+}
+
+@media print {
+
+.noprint
+	{
+	display: none;
+	}
+
+.printOnly
+	{
+	color: black;
+	}
+
+html
+	{
+	margin: 0;
+	padding: 0;
+	}
+
+body
+	{
+	background-color: White;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	}
+
+.singleFrame
+	{
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+	background-color: White;
+	}
+
+.cellCaption
+	{
+	text-indent: 8;
+	height: 19;
+	background-color: #CCCCCC;
+	border: 1px solid #CCCCCC;
+	color: #444444;
+	padding-top: 2;
+	}
+
+.tableBody
+	{
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+	padding: 2;
+	overflow: visible;
+	}
+
+.cellValue
+	{
+	padding-left: 0;
+	padding-right: 7;
+	height: 19;
+	vertical-align: center;
+	text-align: left;
+	white-space: nowrap;
+	}
+
+}

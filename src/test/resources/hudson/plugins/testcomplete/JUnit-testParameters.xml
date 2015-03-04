@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:fo="http://www.w3.org/1999/XSL/Format"
+           xmlns:fn="http://www.w3.org/2005/xpath-functions"
+           xmlns:xdt="http://www.w3.org/2005/xpath-datatypes"
+           timestamp="2015-03-01T10:58:17.767Z"
+           time=""
+           tests="4"
+           errors="0"
+           failures="0"
+           skipped="0"
+           name="TestProjectSuite">
+   <testcase time="0.29" name="KT1" classname="TestKeywordProject">
+      <system-out><![CDATA[[2015-03-01T10:58:18.137Z] ** Message ** : Informative message
+]]></system-out>
+   </testcase>
+   <testcase time="0.045" name="KT2" classname="TestKeywordProject">
+      <system-out><![CDATA[[2015-03-01T10:58:18.272Z] ** Warning ** : Warning message
+]]></system-out>
+   </testcase>
+   <testcase time="0.47" name="Unit1\ST1" classname="TestScriptProject">
+      <system-out><![CDATA[[2015-03-01T10:58:19.292Z] ** Message ** : Info messsage
+]]></system-out>
+   </testcase>
+   <testcase time="0.045" name="Unit1\ST2" classname="TestScriptProject">
+      <system-out><![CDATA[[2015-03-01T10:58:19.357Z] ** Warning ** : Warning message
+]]></system-out>
+   </testcase>
+</testsuite>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:aqds="aq-dataschema">
+  <xs:element name="TestLog" type="aqds:tree" caption="Test Log">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TestLogItem">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Type" type="aqds:image" caption="Type"/>
+              <xs:element name="Message" type="aqds:string" caption="Message"/>
+              <xs:element name="Time" type="aqds:datetime" caption="Time"/>
+              <xs:element name="Priority" type="aqds:string" caption="Priority"/>
+              <xs:element name="Link" type="aqds:hyperlink" caption="Link"/>
+              <xs:element name="HasPicture" type="aqds:image" caption="Has Picture"/>
+              <xs:element name="TypeDescription" type="aqds:string" caption="Type Description"/>
+              <xs:element name="Picture" type="aqds:pictures" caption="Picture">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="PictureItem">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Name" type="aqds:string" caption="Caption"/>
+                          <xs:element name="Picture" type="aqds:picture" caption="Picture"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="aqds:int"/>
+                        <xs:attribute name="filename" type="aqds:string"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="AdditionalInfo" type="aqds:text" caption="Additional Info">
+                <xs:complexType type="aqds:string" textformat="1">
+                  <xs:sequence/>
+                  <xs:attribute name="isfilename" type="aqds:boolean"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="CallStack" type="aqds:table" caption="Call Stack">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="CallStackItem">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Type" type="aqds:image" caption="Type"/>
+                          <xs:element name="Test" type="aqds:string" caption="Test"/>
+                          <xs:element name="UnitName" type="aqds:string" caption="Unit Name"/>
+                          <xs:element name="LineNo" type="aqds:int" caption="Line No"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="aqds:string"/>
+                        <xs:attribute name="pid" type="aqds:string"/>
+                        <xs:attribute name="nety" type="aqds:boolean"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="aqds:string"/>
+            <xs:attribute name="pid" type="aqds:string"/>
+            <xs:attribute name="nety" type="aqds:boolean"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:aqds="aq-dataschema">
+  <xs:element name="ProjectSuiteLog" type="aqds:tree" caption="Project Suite Log">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ProjectSuiteLogItem">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Status" type="aqds:image" caption="Status"/>
+              <xs:element name="No" type="aqds:int" caption="No"/>
+              <xs:element name="Name" type="aqds:string" caption="Name"/>
+              <xs:element name="StartTime" type="aqds:datetime" caption="Start Time"/>
+              <xs:element name="EndTime" type="aqds:datetime" caption="End Time"/>
+              <xs:element name="RunTime" type="aqds:datetime" caption="Run Time"/>
+              <xs:element name="Details" type="aqds:hyperlink" caption="Details"/>
+              <xs:element name="Messages" type="aqds:table" caption="Messages">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="MessagesItem">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Type" type="aqds:image" caption="Type"/>
+                          <xs:element name="Message" type="aqds:string" caption="Message"/>
+                          <xs:element name="Priority" type="aqds:string" caption="Priority"/>
+                          <xs:element name="Time" type="aqds:datetime" caption="Time"/>
+                          <xs:element name="ExtendedMessage" type="aqds:text" caption="Extended Message">
+                            <xs:complexType type="aqds:string" textformat="1">
+                              <xs:sequence/>
+                              <xs:attribute name="isfilename" type="aqds:boolean"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="aqds:string"/>
+                        <xs:attribute name="pid" type="aqds:string"/>
+                        <xs:attribute name="nety" type="aqds:boolean"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="aqds:string"/>
+            <xs:attribute name="pid" type="aqds:string"/>
+            <xs:attribute name="nety" type="aqds:boolean"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

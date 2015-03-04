@@ -1,0 +1,191 @@
+<html>
+<head>
+<title>Summary Report</title>
+<style>
+body{
+	font-weight : normal;
+	font-family : Segoe UI, Tahoma;
+	padding : 5px 10px 5px 5px;
+}
+p{
+	font-size : 80%;
+}
+td{
+	font-size : 80%;
+	text-align : left;
+}
+a{
+	color : #0000FF;
+}
+a:hover{
+	color : #3366FF;
+}
+a:visited{
+	color : #0000FF;
+}
+h2{
+	font-size : 100%;
+	border-bottom : 1px solid #8e8e8e;
+	margin: 20px 10px 5px 5px;
+	font-weight: normal;
+}
+h2 a, h2 a:visited{
+	text-decoration : none;
+	color : #8e8e8e;
+}
+h2 a:hover{
+	color : #444444;
+}
+.section{
+	margin : 0px 0px 0px 20px;
+}
+.testHeader p{
+	font-size : 120%;
+	margin : 0;
+	padding : 0;
+	line-height : 1.5;
+}
+.header2{
+	font-weight	: bold;
+	font-style	: normal;
+	padding-top	: 10px;
+}
+.resultImage{
+	width : 10ex;
+}
+.generalCellTitle{
+	width : 15ex;
+}
+.generalCellData{
+	width : 30ex;
+}
+.generalCellData2{
+	width : 30ex;
+	padding-left : 2ex;
+}
+.generalCellTitle2{
+	width : 16ex;
+	padding-left : 4ex;
+}
+.generalCellTitle3{
+	width : 10ex;
+	padding-left : 4ex;
+}
+.warningsNote{
+	font-size : 90%;
+}
+#idChartBorder{
+    width : 50ex;
+    border-top : 1px dotted #8e8e8e;
+    border-left : 1px dotted #8e8e8e;
+    border-right : 1px dotted #8e8e8e;
+    border-bottom : 1px dotted #8e8e8e;
+}
+#idChartReqs{
+    width : 58ex;
+    color : #808080;
+    margin-top : 20px;
+    margin-left : 20px;
+    margin-right : 30px;
+    margin-bottom : 30px;
+}
+</style>
+<script language="JavaScript">
+function ShowHide(imgId, elemId)
+{
+	var img = document.getElementById(imgId);
+	if (img == null) return;
+	var elem = document.getElementById(elemId);
+	if (elem == null) return;
+	if (elem.style.display == "")
+	{
+		img.src = "TestScriptProject_btn_plus.gif";
+		elem.style.display = "none";
+	}
+	else
+	{
+		img.src = "TestScriptProject_btn_minus.gif";
+		elem.style.display = "";
+	}
+}
+function flashVersion() {
+    version = -1;
+    try {
+        if (typeof ActiveXObject != "undefined")
+            var a = new ActiveXObject("ShockwaveFlash.ShockwaveFlash");
+        else
+        {
+            a = document.createElement("OBJECT");
+            a.type = "application/x-shockwave-flash";
+            var t = document.body.appendChild(a);
+        }
+        if (a) {
+            version = a.GetVariable("$version");
+        }
+        if (t) document.body.removeChild(a);
+    } catch (e) {}
+    return version;
+}
+</script>
+</head>
+<body>
+<table>
+<tr>
+<td class="resultImage"><img src="TestScriptProject_ico_error.gif" width="48px" height="48px"/></td>
+<td class="testHeader"><p><b>Test:</b> TestScriptProject </p>
+<p><b>Result:</b> Error(s) occurred </p> </td>
+</tr>
+</table>
+<h2><a href="JavaScript:ShowHide('GeneralResults_Img', 'GeneralResults_Section');"><img src="TestScriptProject_btn_minus.gif" border="0" id="GeneralResults_Img"/>General</a></h2>
+<div id="GeneralResults_Section" class="section">
+<table>
+<tr><td class="generalCellTitle">Test started:</td><td class="generalCellData">3/1/2015 10:58:18 AM</td><td class="generalCellTitle2">User:</td><td>appusr</td></tr>
+<tr><td>Test stopped:</td><td class="generalCellData">3/1/2015 10:58:19 AM</td><td class="generalCellTitle2">Computer:</td><td>W7ES150565D</td></tr>
+<tr><td>Test duration:</td><td class="generalCellData">0.730 s</td><td></td><td></td></tr>
+</table>
+</div>
+<h2><a href="JavaScript:ShowHide('Details_Img', 'Details_Section');"><img src="TestScriptProject_btn_minus.gif" border="0" id="Details_Img"/>Details</a></h2>
+<div id="Details_Section" class="section">
+<table style="width: 50%;">
+<table style="width: 50%">
+<tr><td class="generalCellTitle"><nobr>Total number of project test items:</nobr></td><td class="generalCellData2">6</td></tr>
+<tr><td class="generalCellTitle"><nobr>Executed project test items:</nobr></td><td class="generalCellData2">6</td></tr>
+</table>
+<table style="width: 50%;">
+<tr><td colspan="2"><br/><b>Project Test Item Results</b></td></tr>
+<tr><td class="generalCellTitle3">Passed:</td><td class="generalCellData">3, <span class="warningsNote">including 2 warning(s)</span></td></tr>
+<tr><td class="generalCellTitle3">Failed:</td><td class="generalCellData">3</td></tr>
+</table>
+<div id="idChart" style="margin-top : 4ex;">
+<div id="idChartBorder" style="display:none;"><div id="idChartReqs" style="display:none;">
+<p><b>[ Chart Placeholder ]</b></p>
+<p>To view the chart, install Adobe Flash Player <span id="idReqVer">8</span> or later for Microsoft Internet Explorer on your computer.</p>
+<p>You can get the Flash Player at <a href="http://get.adobe.com/flashplayer/" target="_blank\">http://get.adobe.com/flashplayer/</a></p>
+</div></div>
+</div>
+<script type="text/javascript"
+src="TestScriptProject_FusionCharts.js">
+</script>
+<script>
+var data = "<chart baseFont='Tahoma' baseFontSize='13' borderColor='FFFFFF' bgColor='FFFFFF' showToolTip='0' chartLeftMargin='-5' chartTopMargin='-5' chartBottomMargin='0' animation='0' showShadow='0' showValues='1' showPercentValues='1' showLabels='0' showLegend='1' legendShadow='0' legendPosition='RIGHT' legendIconScale='2' legendBorderColor='FFFFFF' showPlotBorder='1' chartLeftMargin='0' chartTopMargin='0' radius3D='100' slicingDistance ='5'> <set value='3' label='3 error(s) (50.00%)' color='FF0000'/> <set value='2' label='2 warning(s) (33.33%)' color='FFD700'/> <set value='1' label='1 success(es) (16.67%)' color='008B00'/></chart>";
+var chart = new FusionCharts("TestScriptProject_Pie2D.swf", "chart_01", 500, 200, 0, 0);
+if(flashVersion() < FusionCharts.options.requiredFlashPlayerVersion){
+	var spanVer = document.getElementById("idReqVer");
+	if (spanVer != null)
+		spanVer.innerHTML = FusionCharts.options.requiredFlashPlayerVersion;
+	var divChartBorder = document.getElementById("idChartBorder");
+	if (divChartBorder != null)
+	    divChartBorder.style.display = "";
+	var divChartReqs = document.getElementById("idChartReqs");
+	if (divChartReqs != null)
+		divChartReqs.style.display = "";
+}
+else {
+	chart.addVariable("dataXML", data);
+	chart.render("idChart");
+}
+</script>
+<p style="padding-left: 5px;"><a  href="#" onclick="return (parent.logtree_openSibling || logtree_openSibling)('Project Log')">View detailed results &raquo;</a></p>
+</div>
+</body>
+</html>

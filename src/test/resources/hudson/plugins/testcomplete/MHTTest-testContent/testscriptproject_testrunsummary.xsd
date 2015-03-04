@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:aqds="aq-dataschema">
+  <xs:element name="TestRunSummary" type="aqds:text" caption="Test Run Summary">
+    <xs:complexType type="aqds:string" textformat="1">
+      <xs:sequence/>
+      <xs:attribute name="isfilename" type="aqds:boolean"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:fo="http://www.w3.org/1999/XSL/Format"
+           xmlns:fn="http://www.w3.org/2005/xpath-functions"
+           xmlns:xdt="http://www.w3.org/2005/xpath-datatypes"
+           timestamp="2015-03-01T10:58:28.396Z"
+           time=""
+           tests="3"
+           errors="0"
+           failures="1"
+           skipped="0"
+           name="TestKeywordProject">
+   <testcase time="0.325" name="KT1" classname="ProjectTestItem1">
+      <system-out><![CDATA[[2015-03-01T10:58:28.601Z] ** Message ** : Informative message
+]]></system-out>
+   </testcase>
+   <testcase time="0.045" name="KT2" classname="ProjectTestItem2">
+      <system-out><![CDATA[[2015-03-01T10:58:28.761Z] ** Warning ** : Warning message
+]]></system-out>
+   </testcase>
+   <testcase time="0.085" name="KT3" classname="ProjectTestItem3">
+      <failure message="Error message"/>
+      <system-out><![CDATA[[2015-03-01T10:58:28.906Z] ** Error ** : Error message
+  Call Stack:
+    1: KT3()
+]]></system-out>
+   </testcase>
+</testsuite>
