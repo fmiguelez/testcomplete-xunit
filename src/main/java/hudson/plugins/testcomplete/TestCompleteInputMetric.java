@@ -40,6 +40,7 @@ import java.util.logging.Logger;
 import javax.xml.transform.stream.StreamSource;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.filefilter.FileFilterUtils;
 import org.jenkinsci.lib.dtkit.model.InputMetricXSL;
 import org.jenkinsci.lib.dtkit.model.InputType;
@@ -161,7 +162,9 @@ public class TestCompleteInputMetric extends InputMetricXSL {
 
 			if (params != null) {
 				params.put(INTERNAL_PARAM_BASE_URL, mis.getBaseUrl());
-				params.put(INTERNAL_PARAM_BASE_PATH, tempDir.getAbsolutePath());
+				// It seems that backslashes should be escaped in XSL references so we just convert to UNIX format 
+				// that works also on Windows for Java.
+				params.put(INTERNAL_PARAM_BASE_PATH, FilenameUtils.normalize(tempDir.getAbsolutePath(), true));
 			}
 
 			MHTEntry entry = null;

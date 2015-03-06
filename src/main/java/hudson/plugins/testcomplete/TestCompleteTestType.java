@@ -25,7 +25,6 @@ package hudson.plugins.testcomplete;
 import hudson.Extension;
 
 import org.jenkinsci.lib.dtkit.descriptor.TestTypeDescriptor;
-import org.jenkinsci.lib.dtkit.model.InputMetric;
 import org.jenkinsci.lib.dtkit.type.TestType;
 import org.kohsuke.stapler.DataBoundConstructor;
 
@@ -36,34 +35,31 @@ import org.kohsuke.stapler.DataBoundConstructor;
  */
 public class TestCompleteTestType extends TestType {
 
-	/**
+    /**
 	 * 
 	 */
-	private static final long serialVersionUID = -8695240210666787247L;
+    private static final long serialVersionUID = -8695240210666787247L;
 
-	String testFilterPattern;
+    String testFilterPattern;
 
-	@DataBoundConstructor
-	public TestCompleteTestType(String pattern, boolean failedIfNotNew,
-			boolean deleteOutputFiles, boolean stopProcessingIfError,
-			String testFilterPattern) {
-		super(pattern, failedIfNotNew, deleteOutputFiles, stopProcessingIfError);
-		this.testFilterPattern = testFilterPattern;
-	}
+    @DataBoundConstructor
+    public TestCompleteTestType(String pattern, boolean failedIfNotNew, boolean deleteOutputFiles,
+            boolean stopProcessingIfError, String testFilterPattern) {
+        super(pattern, failedIfNotNew, deleteOutputFiles, stopProcessingIfError);
+        this.testFilterPattern = testFilterPattern;
+    }
 
+    @Override
+    public TestTypeDescriptor<?> getDescriptor() {
+        return new TestCompleteTestType.DescriptorImpl();
+    }
 
-	@Override
-	public TestTypeDescriptor<?> getDescriptor() {
-		return new TestCompleteTestType.DescriptorImpl();
-	}
+    @Extension
+    public static class DescriptorImpl extends TestTypeDescriptor<TestCompleteTestType> {
 
-	@Extension
-	public static class DescriptorImpl extends
-			TestTypeDescriptor<TestCompleteTestType> {
-
-		public DescriptorImpl() {
-			super(TestCompleteTestType.class, TestCompleteInputMetric.class);
-		}
-	}
+        public DescriptorImpl() {
+            super(TestCompleteTestType.class, TestCompleteInputMetric.class);
+        }
+    }
 
 }
