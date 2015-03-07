@@ -67,7 +67,7 @@ public class AbstractXUnitXSLTest {
 		// To generate results when building new tests
 		/*
 		 * org.apache.commons.io.FileUtils .copyFile( outputXMLFile, new File(
-		 * "/Users/fer/git/testcomplete-plugin/src/test/resources/hudson/plugins/testcomplete/"
+		 * "/Users/fer/git/testcomplete-xunit-plugin/src/test/resources/hudson/plugins/testcomplete/"
 		 * + expectedResultPath));
 		 */
 		Diff myDiff = new Diff(XSLUtil.readXmlAsString(new File(this.getClass()
