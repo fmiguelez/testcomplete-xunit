@@ -4,7 +4,7 @@
            xmlns:fn="http://www.w3.org/2005/xpath-functions"
            xmlns:xdt="http://www.w3.org/2005/xpath-datatypes"
            timestamp="2015-03-01T10:58:43.951Z"
-           time=""
+           time="0.554"
            tests="3"
            errors="0"
            failures="1"

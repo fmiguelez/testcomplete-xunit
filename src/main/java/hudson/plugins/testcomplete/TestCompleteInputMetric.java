@@ -162,9 +162,11 @@ public class TestCompleteInputMetric extends InputMetricXSL {
 
 			if (params != null) {
 				params.put(INTERNAL_PARAM_BASE_URL, mis.getBaseUrl());
-				// It seems that backslashes should be escaped in XSL references so we just convert to UNIX format 
+				// It seems that backslashes should be escaped in XSL references
+				// so we just convert to UNIX format
 				// that works also on Windows for Java.
-				params.put(INTERNAL_PARAM_BASE_PATH, FilenameUtils.normalize(tempDir.getAbsolutePath(), true));
+				params.put(INTERNAL_PARAM_BASE_PATH, FilenameUtils.normalize(
+						tempDir.getAbsolutePath(), true));
 			}
 
 			MHTEntry entry = null;
@@ -222,9 +224,10 @@ public class TestCompleteInputMetric extends InputMetricXSL {
 			File rootXml = xmlFiles.iterator().next();
 
 			/*
-			 * TODO We are unable to pass testFilterPattern as specified by user because 
-			 * xUnit does not pass the TestType instance (TestCompleteTestType). Base plugin
-			 * should be extended to pass customized parameters.
+			 * TODO We are unable to pass testFilterPattern as specified by user
+			 * because xUnit does not pass the TestType instance
+			 * (TestCompleteTestType). Base plugin should be extended to pass
+			 * customized parameters.
 			 */
 			if (testFilterPattern.length() > 0) {
 				if (testFilterPattern.startsWith("^")
@@ -262,6 +265,7 @@ public class TestCompleteInputMetric extends InputMetricXSL {
 			throw new ConversionException("Errors parsing input MHT file '"
 					+ inputFile.getName() + "'", e);
 		} finally {
+
 			if (inputTempDir != null) {
 				try {
 					FileUtils.deleteDirectory(inputTempDir);

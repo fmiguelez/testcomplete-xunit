@@ -64,10 +64,10 @@ public class AbstractXUnitXSLTest {
 
 		inputMetric.convert(inputXMLFile, outputXMLFile, params);
 
-		// TODO Remove
+		// To generate results when building new tests
 		/*
 		 * FileUtils .copyFile( outputXMLFile, new File(
-		 * "/Users/fer/git/testcomplete-xunit-plugin/src/test/resources/hudson/plugins/testcomplete/"
+		 * "/Users/fer/git/testcomplete-plugin/src/test/resources/hudson/plugins/testcomplete/"
 		 * + expectedResultPath));
 		 */
 		Diff myDiff = new Diff(XSLUtil.readXmlAsString(new File(this.getClass()

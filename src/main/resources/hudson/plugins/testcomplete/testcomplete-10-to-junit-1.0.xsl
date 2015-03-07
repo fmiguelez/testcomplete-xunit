@@ -31,7 +31,7 @@
 			select="count(//LogData[matches(@name,$testLogNamePattern) and Provider/@name='Test Log' and @status=2])" />
 
 		<xsl:variable name="testSuiteData"
-			select="document(concat($baseDir,substring-after(Provider[position() = 1]/@href,$baseUrl)))" />
+			select="document(concat($baseDir,lower-case(substring-after(Provider[position() = 1]/@href,$baseUrl))))" />
 
 		<testsuite>
 			<xsl:attribute name="timestamp">
@@ -46,7 +46,7 @@
 				</xsl:if>
             </xsl:attribute>
 			<xsl:attribute name="time">
-				<xsl:if test="testSuiteData//*[ends-with(name(),'LogItem')]/RunTime">
+				<xsl:if test="$testSuiteData//*[ends-with(name(),'LogItem')]/RunTime">
 	                <xsl:value-of
 					select="sum($testSuiteData//*[ends-with(name(),'LogItem')]/RunTime/@msec) div 1000" />
 				</xsl:if>
@@ -72,12 +72,12 @@
 					<xsl:variable name="testLogData">
 						<xsl:if test="../Provider[ends-with(@name,'Log') and position() = 1]">
 							<xsl:copy-of
-								select="document(concat($baseDir,substring-after(../Provider[ends-with(@name,'Log') and position() = 1]/@href,$baseUrl)))" />
+								select="document(concat($baseDir,lower-case(substring-after(../Provider[ends-with(@name,'Log') and position() = 1]/@href,$baseUrl))))" />
 						</xsl:if>
 					</xsl:variable>
 					<xsl:variable name="testItemsLogData">
 						<xsl:copy-of
-							select="document(concat($baseDir,substring-after(Provider[ends-with(@name,'Log') and position() = 1]/@href,$baseUrl)))" />
+							select="document(concat($baseDir,lower-case(substring-after(Provider[ends-with(@name,'Log') and position() = 1]/@href,$baseUrl))))" />
 					</xsl:variable>
 
 					<xsl:variable name="testLogPosition">
