@@ -66,7 +66,7 @@ public class AbstractXUnitXSLTest {
 
 		// To generate results when building new tests
 		/*
-		 * FileUtils .copyFile( outputXMLFile, new File(
+		 * org.apache.commons.io.FileUtils .copyFile( outputXMLFile, new File(
 		 * "/Users/fer/git/testcomplete-plugin/src/test/resources/hudson/plugins/testcomplete/"
 		 * + expectedResultPath));
 		 */

@@ -12,7 +12,7 @@
            name="Script Test Log [Unit1\ST3]">
    <testcase time="" name="Unit1\ST3" classname="">
       <failure message="Error message"/>
-      <system-out><![CDATA[[2015-03-01T10:59:11.612Z] ** Error ** : Error message
+      <system-out><![CDATA[[2015-03-01 10:59:11.612] ** Error ** : Error message
   Call Stack:
     23: Unit1.ST311
     18: Unit1.ST31

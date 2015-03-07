@@ -118,7 +118,7 @@
 		</testsuite>
 	</xsl:template>
 
-	<!-- Borrowed from http://stackoverflow.com/a/17084608 -->
+	<!-- Adaptation from from http://stackoverflow.com/a/17084608 -->
 	<xsl:template name="convertTc2XsdDateTime">
 		<xsl:param name="inputDateTime" />
 		<xsl:param name="inputMillis" />
@@ -145,7 +145,7 @@
 						<xsl:variable name="minutes" select="number(regex-group(5))" />
 						<xsl:variable name="seconds" select="number(regex-group(6))" />
 						<xsl:variable name="dateTime"
-							select="xs:dateTime( concat($year, '-', format-number($month, '00'), '-', format-number($day, '00'), 'T', format-number($hours, '00'), ':', format-number($minutes, '00'), ':', format-number($seconds, '00'), '.', format-number($inputMillis,'000'), 'Z')  )" />
+							select="concat($year, '-', format-number($month, '00'), '-', format-number($day, '00'), ' ', format-number($hours, '00'), ':', format-number($minutes, '00'), ':', format-number($seconds, '00'), '.', format-number($inputMillis,'000'))" />
 						<xsl:value-of select="$dateTime" />
 					</xsl:matching-substring>
 				</xsl:analyze-string>
@@ -162,7 +162,7 @@
 						<xsl:variable name="minutes" select="number(regex-group(5))" />
 						<xsl:variable name="seconds" select="number(regex-group(6))" />
 						<xsl:variable name="dateTime"
-							select="xs:dateTime( concat($year, '-', format-number($month, '00'), '-', format-number($day, '00'), 'T', format-number($hours, '00'), ':', format-number($minutes, '00'), ':', format-number($seconds, '00'), '.', format-number($inputMillis,'000'), 'Z')  )" />
+							select="concat($year, '-', format-number($month, '00'), '-', format-number($day, '00'), ' ', format-number($hours, '00'), ':', format-number($minutes, '00'), ':', format-number($seconds, '00'), '.', format-number($inputMillis,'000'))" />
 						<xsl:value-of select="$dateTime" />
 					</xsl:matching-substring>
 				</xsl:analyze-string>
